@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUIME Restaurant & Bar</title>
+  <link rel="stylesheet" href="style_with_live_music_corrected.css" />
+</head>
+<body>
+
+
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="PUIME Logo">
+  </div>
+
+  <nav id="nav" class="nav-menu">
+    <a href="#home" id="nav-home" class="nav-link active" data-page="home">HOME</a>
+    <a href="#about" id="nav-about" class="nav-link" data-page="about">ABOUT US</a>
+    <a href="menu.html" id="nav-menu" class="nav-link" data-page="menu">MENU</a>
+    <a href="bar.html" id="nav-bar" class="nav-link" data-page="bar">BAR</a>
+    <a href="gallery.html" id="nav-gallery" class="nav-link" data-page="gallery">GALLERY</a>
+    <a href="#reservation" id="nav-reservation" class="nav-link" data-page="reservation">RESERVATION</a>
+    <a href="#contact" id="nav-contact" class="nav-link" data-page="contact">CONTACT</a>
+    <a href="cart.html" id="nav-cart" class="nav-link cart-link" data-page="cart">
+      🛒 CART <span id="cart-count" class="cart-count">0</span>
+    </a>
+  </nav>
+
+  <a href="#reservation" id="reservation-link" class="book-btn">Book a Table</a>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<section id="home" class="page active">
+  
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="script">Good Food. Good Drinks. Good Time</p>
+      <h1>PUIME</h1>
+      <h2>RESTAURANT AND BAR</h2>
+      <p>A perfect blend of delicious food, premium drinks and unforgettable moments.</p>
+      <div class="hero-buttons">
+        <button class="primary" onclick="window.location.href='menu.html'">Explore menu</button>
+        <button class="outline" onclick="showPage('reservation')">Book a Table</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/resturant.jpeg" alt="Restaurant">
+    </div>
+  </section>
+
+  <!-- LIVE MUSIC EVENT SECTION -->
+  <section class="live-music-event">
+    <div class="live-music-content">
+      <span class="event-label">LIVE EVENT</span>
+      <h2>Live Music Every Friday</h2>
+      <p>Start your weekend at PUIME with delicious food, refreshing drinks and a relaxing live music atmosphere every Friday night.</p>
+      <div class="event-details">
+        <div>
+          <strong>Every Friday</strong>
+          <span>7:00 PM onwards</span>
+        </div>
+        <div>
+          <strong>Food • Drinks • Music</strong>
+          <span>Perfect weekend vibes</span>
+        </div>
+      </div>
+      <a href="#reservation" class="event-btn">Reserve Your Table</a>
+    </div>
+    <div class="live-music-image">
+      <img src="images/gallery4.jpeg" alt="Live music event at PUIME">
+    </div>
+  </section>
+
+  <!-- CATEGORY SECTION -->
+  <section class="categories">
+    <h3>EXPLORE</h3>
+    <h2>OUR CATEGORIES</h2>
+    <div class="category-grid">
+
+      <div class="card" onclick="window.location.href='menu.html'">
+        <img src="images/indian.webp" alt="Indian Food">
+        <h4>INDIAN FOOD</h4>
+        <p>Explore Now →</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='menu.html'">
+        <img src="images/coffe.webp" alt="Cafe">
+        <h4>CAFE</h4>
+        <p>Explore Now →</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='bar.html'">
+        <img src="images/cocktail.webp" alt="Cocktails">
+        <h4>COCKTAILS</h4>
+        <p>Explore Now →</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='bar.html'">
+        <img src="images/hukka.jpeg" alt="Bar">
+        <h4>BAR</h4>
+        <p>Explore Now →</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='menu.html'">
+        <img src="images/buffet.jpeg" alt="Buffet">
+        <h4>BUFFET</h4>
+        <p>Explore Now →</p>
+      </div>
+
+      <div class="card" onclick="window.location.href='menu.html'">
+        <img src="images/momo.jpeg" alt="Momos">
+        <h4>MOMOS & CHOWMEIN</h4>
+        <p>Explore Now →</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIGNATURE DISHES -->
+  <section class="dishes">
+    <h3>CHEF'S</h3>
+    <h2>SIGNATURE DISHES</h2>
+    <div class="dish-grid">
+      <div class="dish" onclick="addToCart('Butter Chicken', 390)">
+        <img src="images/butter.jpeg" alt="Butter Chicken">
+        <div>
+          <h4>Butter Chicken</h4>
+          <p>Rs. 390</p>
+        </div>
+        <span>★</span>
+      </div>
+
+      <div class="dish" onclick="addToCart('Puime Special Burger', 350)">
+        <img src="images/burger.jpeg" alt="Burger">
+        <div>
+          <h4>Puime Special Burger</h4>
+          <p>Rs. 350</p>
+        </div>
+        <span>★</span>
+      </div>
+
+      <div class="dish" onclick="addToCart('Veg Hakka Noodles', 220)">
+        <img src="images/chowmine.jpeg" alt="Noodles">
+        <div>
+          <h4>Veg Hakka Noodles</h4>
+          <p>Rs. 220</p>
+        </div>
+        <span>★</span>
+      </div>
+
+      <div class="dish" onclick="addToCart('Chicken Biryani', 400)">
+        <img src="images/biryani.jpeg" alt="Biryani">
+        <div>
+          <h4>Chicken Biryani</h4>
+          <p>Rs. 400</p>
+        </div>
+        <span>★</span>
+      </div>
+
+      <div class="dish" onclick="addToCart('Blue Lagoon', 500)">
+        <img src="images/juice.jpeg" alt="Blue Lagoon">
+        <div>
+          <h4>Blue Lagoon</h4>
+          <p>Rs. 500</p>
+        </div>
+        <span>★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW SECTION -->
+  <section class="reviews">
+    <h3>TESTIMONIALS</h3>
+    <h2>What Our Customers Say</h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <img src="images/sneha.jpeg" alt="Customer">
+        <h4>Rabin Gurung</h4>
+        <div class="stars">★★★★★</div>
+        <p>Amazing food and relaxing environment. The cocktails were perfect and the service was excellent.</p>
+      </div>
+
+      <div class="review-card">
+        <img src="images/nishika.jpeg" alt="Customer">
+        <h4>Sophia Rai</h4>
+        <div class="stars">★★★★★</div>
+        <p>One of the best restaurants in Pokhara. The momo and biryani were absolutely delicious.</p>
+      </div>
+
+      <div class="review-card">
+        <img src="images/astha.png" alt="Customer">
+        <h4>Aayush Thapa</h4>
+        <div class="stars">★★★★★</div>
+        <p>Great music, amazing drinks and beautiful atmosphere. Perfect place for friends and family.</p>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page">
+  <div class="page-section">
+    <h1>About PUIME</h1>
+    <p class="intro-text">PUIME Restaurant & Bar is a perfect destination for delicious food, refreshing drinks and unforgettable moments in Pokhara.</p>
+    <img src="images/resturant.jpeg" class="about-banner" alt="Restaurant">
+
+    <div class="about-features">
+      <div class="feature-box">
+        <h3>🍽️ Premium Food</h3>
+        <p>We serve authentic Indian food, momo, chowmein, buffet and delicious snacks prepared by experienced chefs using fresh ingredients.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>🍹 Luxury Bar</h3>
+        <p>Enjoy premium cocktails, mocktails, beer and hookah with live music and relaxing vibes perfect for any occasion.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>🌟 Perfect Atmosphere</h3>
+        <p>Whether for family dinner, birthday celebration, date night or party — PUIME is the perfect destination for creating memories.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY PAGE -->
+<section id="gallery" class="page">
+  <section class="gallery-hero">
+    <div class="gallery-overlay">
+      <h1>PUIME GALLERY</h1>
+      <p>Discover the atmosphere, food, drinks and unforgettable moments at PUIME Restaurant & Bar.</p>
+    </div>
+  </section>
+
+  <section class="gallery-carousel-section">
+    <div class="gallery-carousel">
+      <div class="gallery-item">
+        <img src="images/gallery5.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery1.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery4.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery5.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery3.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery2.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery4.jpeg" alt="Gallery Image">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/gallery1.jpeg" alt="Gallery Image">
+      </div>
+    </div>
+
+    <div class="carousel-actions">
+      <a href="gallery.html" class="primary">View Full Gallery</a>
+    </div>
+  </section>
+</section>
+
+<!-- RESERVATION PAGE -->
+<section id="reservation" class="page">
+  <div class="page-section">
+    <h1>Book a Table</h1>
+    <p class="intro-text">Reserve your table at PUIME for an unforgettable dining experience</p>
+    
+    <form id="reservationForm" class="reservation-form" onsubmit="submitReservation(event)">
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email">
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+      <textarea name="message" placeholder="Special Request (Optional)"></textarea>
+      <button type="submit">Confirm Reservation</button>
+    </form>
+
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>📞 Call Us</h3>
+        <p>+977 61-456050</p>
+      </div>
+
+      <div class="info-box">
+        <h3>📧 Email</h3>
+        <p>info@puime.com</p>
+      </div>
+
+      <div class="info-box">
+        <h3>⏰ Hours</h3>
+        <p>Mon-Thu: 10 AM - 11 PM<br>Fri-Sat: 10 AM - 1 AM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact" class="page">
+  <div class="page-section">
+    <h1>Contact Us</h1>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Restaurant Information</h3>
+        <p><strong>Address:</strong><br>Himali Tole, Pokhara 33700, Nepal</p>
+        <p><strong>Phone:</strong><br>+977 61-456050</p>
+        <p><strong>Email:</strong><br>info@puime.com</p>
+        <p><strong>Opening Hours:</strong><br>Mon - Thu: 10 AM - 11 PM<br>Fri - Sat: 10 AM - 1 AM</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Message</h3>
+        <form id="contactForm" onsubmit="submitContact(event)">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="map-box">
+      <iframe src="https://maps.google.com/maps?q=Pokhara&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <img src="images/logo.png" alt="Logo">
+      <p>A perfect blend of delicious food, premium drinks and unforgettable moments.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Opening Hours</h4>
+      <p>Mon - Thu: 10 AM - 11 PM</p>
+      <p>Fri - Sat: 10 AM - 1 AM</p>
+      <p>Sun: 10 AM - 11 PM</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Himali Tole, Pokhara 33700, Nepal</p>
+      <p>+977 61-456050</p>
+      <p>info@puime.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 PUIME Restaurant & Bar. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

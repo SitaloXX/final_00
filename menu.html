@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu | PUIME</title>
+  <link rel="stylesheet" href="style_with_live_music_corrected.css">
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="PUIME Logo">
+  </div>
+
+  <nav id="nav" class="nav-menu">
+    <a href="index_corrected.html" id="nav-home" class="nav-link active" data-page="home">HOME</a>
+    <a href="index_corrected.html" id="nav-about" class="nav-link" data-page="about">ABOUT US</a>
+    <a href="menu.html" id="nav-menu" class="nav-link" data-page="menu">MENU</a>
+    <a href="bar.html" id="nav-bar" class="nav-link" data-page="bar">BAR</a>
+    <a href="gallery.html" id="nav-gallery" class="nav-link" data-page="gallery">GALLERY</a>
+    <a href="index_corrected.html" id="nav-reservation" class="nav-link" data-page="reservation">RESERVATION</a>
+    <a href="index_corrected.html" id="nav-contact" class="nav-link" data-page="contact">CONTACT</a>
+    <a href="cart.html" id="nav-cart" class="nav-link cart-link" data-page="cart">
+      🛒 CART <span id="cart-count" class="cart-count">0</span>
+    </a>
+  </nav>
+
+  <a href="#reservation" id="reservation-link" class="book-btn">Book a Table</a>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<section class="page-section">
+  <h1>PUIME Menu</h1>
+
+  <div class="menu-category">
+
+    <h2> </h2>
+    <h2>Indian Food</h2>
+    <button onclick="addToCart('Butter Chicken', 390)">Butter Chicken - Rs. 390</button>
+    <button onclick="addToCart('Kadhai Chicken', 350)">Kadhai Chicken - Rs. 350</button>
+    <button onclick="addToCart('Chicken Curry', 350)">Chicken Curry - Rs. 350</button>
+    <button onclick="addToCart('Chicken Biryani', 400)">Chicken Biryani - Rs. 400</button>
+    <button onclick="addToCart('Paneer Butter Masala', 390)">Paneer Butter Masala - Rs. 390</button>
+    <button onclick="addToCart('Veg Curry', 220)">Veg Curry - Rs. 220</button>
+  </div>
+
+  <div class="menu-category">
+    <h2>Momo & Chowmein</h2>
+    <button onclick="addToCart('Veg Momo', 130)">Veg Momo - Rs. 130</button>
+    <button onclick="addToCart('Chicken Momo', 150)">Chicken Momo - Rs. 150</button>
+    <button onclick="addToCart('Chicken Fry Momo', 160)">Chicken Fry Momo - Rs. 160</button>
+    <button onclick="addToCart('Veg Chowmein', 130)">Veg Chowmein - Rs. 130</button>
+    <button onclick="addToCart('Egg Chowmein', 150)">Egg Chowmein - Rs. 150</button>
+    <button onclick="addToCart('Chicken Chowmein', 160)">Chicken Chowmein - Rs. 160</button>
+  </div>
+
+  <div class="menu-category">
+    <h2>Snacks</h2>
+    <button onclick="addToCart('Chicken Wings', 130)">Chicken Wings - Rs. 130</button>
+    <button onclick="addToCart('Chicken Timur', 380)">Chicken Timur - Rs. 380</button>
+    <button onclick="addToCart('Crispy Chicken', 400)">Crispy Chicken - Rs. 400</button>
+    <button onclick="addToCart('French Fries', 250)">French Fries - Rs. 250</button>
+    <button onclick="addToCart('Paneer Pakoda', 400)">Paneer Pakoda - Rs. 400</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <img src="images/logo.png" alt="Logo">
+      <p>A perfect blend of delicious food, premium drinks and unforgettable moments.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Opening Hours</h4>
+      <p>Mon - Thu: 10 AM - 11 PM</p>
+      <p>Fri - Sat: 10 AM - 1 AM</p>
+      <p>Sun: 10 AM - 11 PM</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>Himali Tole, Pokhara 33700, Nepal</p>
+      <p>+977 61-456050</p>
+      <p>info@puime.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 PUIME Restaurant & Bar. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart & Payment | PUIME</title>
+  <link rel="stylesheet" href="style_with_live_music_corrected.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="PUIME Logo">
+  </div>
+
+  <nav id="nav" class="nav-menu">
+    <a href="index_corrected.html" id="nav-home" class="nav-link active" data-page="home">HOME</a>
+    <a href="index_corrected.html" id="nav-about" class="nav-link" data-page="about">ABOUT US</a>
+    <a href="menu.html" id="nav-menu" class="nav-link" data-page="menu">MENU</a>
+    <a href="bar.html" id="nav-bar" class="nav-link" data-page="bar">BAR</a>
+    <a href="gallery.html" id="nav-gallery" class="nav-link" data-page="gallery">GALLERY</a>
+    <a href="index_corrected.html" id="nav-reservation" class="nav-link" data-page="reservation">RESERVATION</a>
+    <a href="index_corrected.html" id="nav-contact" class="nav-link" data-page="contact">CONTACT</a>
+    <a href="cart.html" id="nav-cart" class="nav-link cart-link" data-page="cart">
+      🛒 CART <span id="cart-count" class="cart-count">0</span>
+    </a>
+  </nav>
+
+  <a href="#reservation" id="reservation-link" class="book-btn">Book a Table</a>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<!-- =============== CART PAGE =============== -->
+<section id="cart" class="page">
+  <div class="page-section">
+    <h1>🛒 Your Cart</h1>
+
+    <div id="cart-items" class="cart-items-container"></div>
+    <h2 id="cart-total">Total: Rs. 0</h2>
+
+    <div id="empty-cart-msg" class="empty-cart-message">
+      <p>Your cart is empty. <a href="#menu">Continue shopping</a></p>
+    </div>
+
+    <div id="checkout-section" class="checkout-section" style="display:none;">
+      <h2>Checkout & Payment</h2>
+      <form id="orderForm" class="reservation-form" onsubmit="submitOrder(event)">
+        <input type="text" name="customer_name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="address" placeholder="Delivery Address / Table Note"></textarea>
+
+        <select name="payment_method" required>
+          <option value="">Choose Payment Method</option>
+          <option value="Cash">Cash on Delivery</option>
+          <option value="Card">Card Payment</option>
+          <option value="eSewa">eSewa</option>
+          <option value="Khalti">Khalti</option>
+        </select>
+
+        <input type="hidden" name="items" id="itemsInput">
+        <input type="hidden" name="total" id="totalInput">
+
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
